@@ -1,0 +1,7 @@
+.selectedTemplate{
+    background: black;
+    color: white
+}
+.template{
+    cursor: pointer
+}
