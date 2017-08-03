@@ -1,6 +1,5 @@
 
 export const getContacts = (data) => {
-    console.log(data)
     return {
         type: "GET_CONTACTS",
         contacts: data
@@ -26,5 +25,11 @@ export const getTemplates = (data) =>{
     return {
         type: "GET_TEMPLATES",
         templates: data
+    }
+}
+export const getMailingLists = (data) =>{
+    return {
+        type: "GET_MAILING_LISTS",
+        mailingLists: data
     }
 }

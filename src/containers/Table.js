@@ -5,6 +5,7 @@ import {getContacts,getTemplates} from '../actions';
 import TableRow from '../components/TableRow';
 import DeleteContact from './DeleteContact';
 import SendEmail from './SendEmail';
+import '../css/table.css';
 
 class Table extends Component{
     componentDidMount(){
