@@ -33,3 +33,9 @@ export const getMailingLists = (data) =>{
         mailingLists: data
     }
 }
+export const displayMailingLists = (boolean) => {
+    return {
+        type: "DISPLAY_MAILING_LISTS",
+        boolean: boolean
+    }
+}

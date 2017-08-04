@@ -10,32 +10,34 @@ class MailingLists extends Component{
 
 
     render() {
-        console.log(this.props.mailingLists)
+        //console.log(this.props.mailingLists)
+        //if(this.props && this.props.mailingLists){
 
-        const options = this.props.mailingLists.map((item,index)=> {
-            return <tr key={index} className="options">
-                <td className="mailingListName"><span id={index}>{item[index].EmailListName}</span>
-                </td>
-             </tr>
-        })
-        return (
-            <div className="choose_mailing_list">
-                <div className="mailLingListSelection">
-                    <table  className="mailingListItemsContainer" name="" id="">
+            //console.log(this.props.mailingLists)
+            const options = this.props.mailingLists.map((item, index) => {
+                return <tr key={index} className="options">
+                    <td className="mailingListName"><span id={index}>{item["EmailListName"]}</span>
+                    </td>
+                </tr>
+            })
+    //}
 
-                        <tbody>{options}</tbody>
-
-                    </table>
+            return (
+                <div className="choose_mailing_list">
+                    <div className="mailLingListSelection">
+                        <table className="mailingListItemsContainer">
+                                <tbody>{options}</tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-        )
+            )
     }
-
 }
 const mapStateToProps = (state) => {
 
     return {
-        mailingLists:state.mailingLists.mailingList
+        boolean: state.mailingLists.boolean,
+        mailingLists:state.mailingLists.mailingLists
     }
 }
 const mapDispatchToProps = (dispatch) => {

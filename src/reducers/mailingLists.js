@@ -1,5 +1,6 @@
 let initialState = {
     mailingLists: [],
+    boolean: false
 }
 
 const mailingList = (state=initialState, action) => {
@@ -9,11 +10,21 @@ const mailingList = (state=initialState, action) => {
         //     return Object.assign({}, state, {contacts: contacts});
         // }
         case "GET_MAILING_LISTS": {
-            return{
-                ...state,
-                mailingList: action.mailingLists
+           // console.log(action.exMailingLists)
+           //  return {
+                //Object.assign({}, state, {mailingList: [action.mailingLists]});
+                // ...state,
+                // mailingList: action.exMailingLists
+                let mailingLists = [...action.mailingLists];
+            return Object.assign({}, state, {mailingLists: mailingLists});
 
             }
+        case "DISPLAY_MAILING_LISTS": {
+            return {
+                ...state,
+                boolean: action.boolean
+            }
+
         }
         default: {
             return state;
